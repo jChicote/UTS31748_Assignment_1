@@ -14,25 +14,59 @@
                   <h1 class="header-title"> This is the Market </h1>
               </div>
               <div class="market-graphic">
-                <div class="display-row" id="prime-category">
-                    <div class="category-cell">Frozen Food</div>
-                    <div class="category-cell">Fresh Food</div>
-                    <div class="category-cell">Beverages</div>
-                    <div class="category-cell">Home Health</div>
-                    <div class="category-cell">Pet Food</div>
-                </div>
-                <div class="display-row ">
-                    <div class="category-cell">Sea Food</div>
-                    <div class="category-cell">Milk Products</div>
-                    <div class="category-cell">Other</div>
-                </div>
-                <div class="display-row ">
-                    <div class="category-cell">Fish Fingers (large)</div>
-                    <div class="category-cell">Fish Fingers (small)</div>
-                    <div class="category-cell">Shelled Prawns</div>
-                </div>
-              </div>
+                <ul id="primecategory" class="display-row">
+                    <li data-value="frozen" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Frozen Food</li>
+                    <li data-value="fresh" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Fresh Food</li>
+                    <li data-value="beverages" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Beverages</li>
+                    <li data-value="home" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Home Health</li>
+                    <li data-value="pet" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Pet Food</li>
+                </ul>
 
+                <!-- Sub Item Display Rows -->
+                <ul id="frozen" class="display-row sub-display-items" style="display: none;">
+                    <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Sea Food</li>
+                    <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Milk Products</li>
+                    <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Other</li>
+                </ul>
+                <ul id="fresh" class="display-row sub-display-items" style="display: none;">
+                    <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Sea Food</li>
+                    <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Milk Products</li>
+                    <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Other</li>
+                </ul>
+                <ul id="beverages" class="display-row sub-display-items" style="display: none;">
+                    <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Sea Food</li>
+                    <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Milk Products</li>
+                    <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Other</li>
+                </ul>
+                <ul id="home" class="display-row sub-display-items" style="display: none;">
+                    <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Sea Food</li>
+                    <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Milk Products</li>
+                    <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Other</li>
+                </ul>
+                <ul id="pet" class="display-row sub-display-items" style="display: none;">
+                    <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Sea Food</li>
+                    <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Milk Products</li>
+                    <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">Other</li>
+                </ul>
+
+                <!-- Frozen Items -->
+                <div>
+                    <ul id="seafood" class="display-row sub-display-items" style="display: none;">
+                        <li class="category-cell">Fish Fingers (large)</li>
+                        <li class="category-cell">Fish Fingers (small)</li>
+                        <li class="category-cell">Shelled Prawns</li>
+                    </ul>
+                    <ul id="milkproducts" class="display-row sub-display-items" style="display: none;">
+                        <li class="category-cell">Tub Ice Cream (1L)</li>
+                        <li class="category-cell">Tub Ice Cream (2L)</li>
+                    </ul>
+                    <ul id="other" class="display-row sub-display-items" style="display: none;">
+                        <li class="category-cell">Hamburger Patties</li>
+                    </ul>
+                </div>
+
+
+              </div>
             </div>
 
             <!-- Reight Component Frame -->
@@ -57,6 +91,6 @@
             </div>
         </div>
 
-        <script> type="text/javascript" src="js/graphic_display.js"></script>
+        <script type="text/javascript" src="js/graphic_display.js"></script>
     <body>
 </html>

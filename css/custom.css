@@ -50,19 +50,27 @@
 }
 
 .display-row {
-  margin: 1rem;
-  background: beige;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    background: beige;
+    display: grid; !important
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    align-items: start;
 }
 
+.sub-display-items { }
+
 .category-cell {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: white;
-  margin: 1rem;
-  padding: 16px;
-  text-align: center;
+    height: 140px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: white;
+    margin: 1rem;
+    padding: 16px;
+    text-align: center;
+    justify-self: stretch;
 }
 
 /* For the Top Right Panel Frame */
