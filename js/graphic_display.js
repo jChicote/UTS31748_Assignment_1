@@ -1,4 +1,5 @@
 
+/* Category Graphic Interaction*/
 
 function onMouseOver(rowcell) {
     rowcell.style.background = "red"
@@ -25,4 +26,10 @@ function revealSubItems(valueID) {
     let subItems = document.getElementById(valueID);
     if (subItems == null) return;
     subItems.style.display = "grid"
+}
+
+/* Product Graphic Interaction */
+
+function onMouseOverProduct(productCell) {
+    productCell.style.background = "green"
 }
