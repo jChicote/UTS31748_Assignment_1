@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
+        <?php include('php/product_search.php');?>
         <div class="grid-container">
 
             <!-- Left Component Frame -->
@@ -121,7 +122,7 @@
                     </li>
                 </ul>
 
-                <!-- Frozen Items -->
+                <!-- Frozen Items Nodes -->
                 <ul id="seafood" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Fingers (large)</li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Fingers (small)</li>
@@ -135,7 +136,7 @@
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Hamburger Patties</li>
                 </ul>
 
-                <!-- Fresh Items -->
+                <!-- Fresh Items Nodes -->
                 <ul id="meats" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">T-Bone Steak</li>
                 </ul>
@@ -151,7 +152,7 @@
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Peaches</li>
                 </ul>
 
-                <!-- Beverages Items -->
+                <!-- Beverages Items Nodes -->
                 <ul id="coffee" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Instant Coffee (200g)</li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Instant Coffee (500g)</li>
@@ -165,7 +166,7 @@
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Chocolate Bar</li>
                 </ul>
 
-                <!-- Home Health Items -->
+                <!-- Home Health Items Nodes -->
                 <ul id="medicine" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Panadol (24 pack)</li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Panadol (Bottle 50)</li>
@@ -182,7 +183,7 @@
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Laundry Bleach</li>
                 </ul>
 
-                <!-- Pet Food -->
+                <!-- Pet Food Nodes -->
                 <ul id="dogfood" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Dry Dog Food (5kg)</li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Dry Dog Food (1kg)</li>
