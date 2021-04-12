@@ -123,8 +123,11 @@
                 </ul>
 
                 <!-- Frozen Items Nodes -->
+                <form action="">
                 <ul id="seafood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Fingers (large)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
+                            <p>Fish Fingers (large)</p>
+                    </li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Fingers (small)</li>
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Shelled Prawns</li>
                 </ul>
@@ -135,6 +138,8 @@
                 <ul id="other" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Hamburger Patties</li>
                 </ul>
+                </form>
+
 
                 <!-- Fresh Items Nodes -->
                 <ul id="meats" class="display-row sub-display-items" style="display: none;">
@@ -204,7 +209,12 @@
             <!-- Reight Component Frame -->
             <div class="right-component">
               <div class="product-display">
-                  <div class="product-information-window"></div>
+                  <div class="product-information-window">
+                      <p id="product_title"> Example Text </p>
+                      <p id="unit_price"> Example Text </p>
+                      <p id="unit_quantity"> Example Text </p>
+                      <p id="product_stock"> Example Text </p>
+                  </div>
                   <button class="add-to-cart-btn">
                       <h3 class="btn-label"> Add To Cart </h3>
                   </button>
@@ -224,5 +234,6 @@
         </div>
 
         <script type="text/javascript" src="js/graphic_display.js"></script>
+        <script type="text/javascript" src="js/product_loader.js"></script>
     <body>
 </html>
