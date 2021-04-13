@@ -123,69 +123,226 @@
                 </ul>
 
                 <!-- Frozen Items Nodes -->
-                <form action="">
                 <ul id="seafood" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
-                            <p>Fish Fingers (large)</p>
+                        <h3 class="cell-label cell-header-label">Fish Fingers</h3>
+                        <p class="cell-label">(large)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
                     </li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Fingers (small)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Shelled Prawns</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1001)">
+                        <h3 class="cell-label cell-header-label">Fish Fingers</h3>
+                        <p class="cell-label">(small)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1003)">
+                        <h3 class="cell-label cell-header-label">Shelled Prawns</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="milkproducts" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Tub Ice Cream (1L)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Tub Ice Cream (2L)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1004)">
+                        <h3 class="cell-label cell-header-label">Tub Ice Cream</h3>
+                        <p class="cell-label">(1L)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1005)">
+                        <h3 class="cell-label cell-header-label">Tub Ice Cream</h3>
+                        <p class="cell-label">(2L)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="other" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Hamburger Patties</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1002)">
+                        <h3 class="cell-label cell-header-label">Hamburger Patties</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
-                </form>
-
 
                 <!-- Fresh Items Nodes -->
                 <ul id="meats" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">T-Bone Steak</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3002)">
+                        <h3 class="cell-label cell-header-label">T-Bone Steak</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="dairy" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Cheddar Cheese (500g)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Cheddar Cheese (1000g)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3000)">
+                        <h3 class="cell-label cell-header-label">Cheddar Cheese</h3>
+                        <p class="cell-label">(500g)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3001)">
+                        <h3 class="cell-label cell-header-label">Cheddar Cheese</h3>
+                        <p class="cell-label">(1000g)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="fruits" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Navel Oranges</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Bananas</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Grapes</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Apples</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Peaches</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)"  onclick="display_product(3003)">
+                        <h3 class="cell-label cell-header-label">Navel Oranges</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3004)">
+                        <h3 class="cell-label cell-header-label">Bananas</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3006)">
+                        <h3 class="cell-label cell-header-label">Grapes</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3007)">
+                        <h3 class="cell-label cell-header-label">Apples</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(3005)">
+                        <h3 class="cell-label cell-header-label">Peaches</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
 
                 <!-- Beverages Items Nodes -->
                 <ul id="coffee" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Instant Coffee (200g)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Instant Coffee (500g)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4003)">
+                        <h3 class="cell-label cell-header-label">Instant Coffee</h3>
+                        <p class="cell-label">(200g)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4004)">
+                        <h3 class="cell-label cell-header-label">Instant Coffee</h3>
+                        <p class="cell-label">(500g)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="tea" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Earl Grey TeaBags (25 pack)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Earl Grey TeaBags (100 pack)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Earl Grey TeaBags (200 pack)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4000)">
+                        <h3 class="cell-label cell-header-label">Earl Grey TeaBags</h3>
+                        <p class="cell-label">(25 pack)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4001)">
+                        <h3 class="cell-label cell-header-label">Earl Grey TeaBags</h3>
+                        <p class="cell-label">(100 pack)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4002)">
+                        <h3 class="cell-label cell-header-label">Earl Grey TeaBags</h3>
+                        <p class="cell-label">(200 pack)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="chocolate" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Chocolate Bar</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(4005)">
+                        <h3 class="cell-label cell-header-label">Chocolate Bar</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
 
                 <!-- Home Health Items Nodes -->
                 <ul id="medicine" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Panadol (24 pack)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Panadol (Bottle 50)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2000)">
+                        <h3 class="cell-label cell-header-label">Panadol</h3>
+                        <p class="cell-label">(24 pack)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2001)">
+                        <h3 class="cell-label cell-header-label">Panadol</h3>
+                        <p class="cell-label">(Bottle 50)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="bathroom" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Bath Soap</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2002)">
+                        <h3 class="cell-label cell-header-label">Bath Soap</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="plasticbags" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Garbage Bags Small</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Garbage Bags Large</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2003)">
+                        <h3 class="cell-label cell-header-label">Garbage Bags Small</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2004)">
+                        <h3 class="cell-label cell-header-label">Garbage Bags Large</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="laundry" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Washing Powder</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Laundry Bleach</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2005)">
+                        <h3 class="cell-label cell-header-label">Washing Powder</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(2006)">
+                        <h3 class="cell-label cell-header-label">Laundry Bleach</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
 
                 <!-- Pet Food Nodes -->

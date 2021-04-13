@@ -54,7 +54,7 @@
     padding: 0;
     margin: 1rem;
     background: beige;
-    display: grid; !important
+    display: grid;
     overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 1rem;
@@ -63,7 +63,21 @@
 
 .sub-display-items { }
 
+/* Cell Related Attributes */
+
+.fade-in-label {
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.category-cell:hover > .fade-in-label {
+    visibility: visible;
+    opacity: 100%;
+    transition: 1s;
+}
+
 .category-cell {
+    border-radius: 10px;
     height: 140px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background: white;
@@ -71,6 +85,24 @@
     padding: 16px;
     text-align: center;
     justify-self: stretch;
+}
+
+.cell-label {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cell-header-label {
+    margin-top: 25%;
+}
+
+.category-cell:hover > .cell-header-label {
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.icon-navigate-next {
+    position: relative;
+    top: 5px;
 }
 
 /* For the Top Right Panel Frame */
