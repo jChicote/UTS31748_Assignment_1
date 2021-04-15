@@ -6,10 +6,10 @@ function display_product(productID) {
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var messageObj = JSON.parse(xhttp.responseText)
-            document.getElementById("product_title").innerHTML = "Product Name: " + messageObj.name
-            document.getElementById("unit_price").innerHTML = "Unit Price: $" + messageObj.price
-            document.getElementById("unit_quantity").innerHTML = "Unit Quantity: " + messageObj.quantity
-            document.getElementById("product_stock").innerHTML = "Product Stock: " + messageObj.stock
+            document.getElementById("product_title").innerHTML = messageObj.name
+            document.getElementById("unit_price").innerHTML = "$" + messageObj.price
+            document.getElementById("unit_quantity").innerHTML = "Quantity: " + messageObj.quantity
+            document.getElementById("product_stock").innerHTML = "In Stock: " + messageObj.stock
             //console.log(messageObj.name)
             //console.log(messageObj.quantity)
         }

@@ -17,9 +17,10 @@
 }
 
 .product-display {
-   background: orange;
-   display: grid;
-   grid-template-rows: 2fr 1fr;
+    background: orange;
+    display: grid;
+    grid-template-rows: 60% 20% 20%;
+    overflow: hidden;
 }
 
 .shopping-cart-display {
@@ -108,17 +109,111 @@
 /* For the Top Right Panel Frame */
 .product-information-window {
     background: beige;
+    margin-left : 1rem;
+    margin-right :1rem;
+    margin-top : 1rem;
+}
+
+.preview-thumbnail {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.product-info {
+    position: relative;
+    text-align: center;
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+/* Info text */
+
+.title-block {
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.sub-product-info {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+#product_title {
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+#unit_price {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dividing-line {
+    width: 90%;
+    margin-left: 0;
+}
+
+.price-block {
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.total-price-label {
+    height: 3rem;
+    background: beige;
     margin: 1rem;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .add-to-cart-btn {
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     background: red;
 }
 
 .btn-label {
     font-size: 25px;
     color: white;
+}
+
+.plus-minus-input {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    bottom: 1rem;;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity-input-field {
+    text-align: center;
+    width: 40%;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.plus-minus-button {
+    height: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* For the Bottom Right Panel Frame */
@@ -141,4 +236,19 @@
 .checkout-btn {
     background: green;
     margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1120px) {
+
+    /* For the Top Right Panel Frame */
+    .preview-thumbnail {
+        width: 100%;
+        height: 45%;
+    }
+
+    .product-info {
+        height: 55%;
+        width: 100%%;
+    }
+
 }
