@@ -1,5 +1,6 @@
 
 // Fields
+var productObj;
 var product_price = 0
 var quantity_total = 0
 var available_stock = 0
@@ -10,13 +11,13 @@ function display_product(productID) {
 
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            var messageObj = JSON.parse(xhttp.responseText)
-            document.getElementById("product_title").innerHTML = messageObj.name
-            document.getElementById("unit_price").innerHTML = "$" + messageObj.price
-            document.getElementById("unit_quantity").innerHTML = "Quantity: " + messageObj.quantity
-            document.getElementById("product_stock").innerHTML = "In Stock: " + messageObj.stock
+            productObj = JSON.parse(xhttp.responseText)
+            document.getElementById("product_title").innerHTML = productObj.name
+            document.getElementById("unit_price").innerHTML = "$" + productObj.price
+            document.getElementById("unit_quantity").innerHTML = "Quantity: " + productObj.quantity
+            document.getElementById("product_stock").innerHTML = "In Stock: " + productObj.stock
 
-            set_display_data(messageObj)
+            set_display_data(productObj)
         }
     };
 
@@ -26,9 +27,9 @@ function display_product(productID) {
 
 // Sets the data to global variabels for usage on top-right hand frame
 function set_display_data(messageObj) {
-    product_price = messageObj.price
-    quantity_total = messageObj.price
-    available_stock = messageObj.stock
+    product_price = productObj.price
+    quantity_total = productObj.price
+    available_stock = productObj.stock
     update_display_total()
     reset_quantity_action()
 }

@@ -7,6 +7,7 @@
     // Encodes search result into a JSON object
     function returnResult($row) {
         if ($selectedID !== "") {
+            $jsonObj->id = $row['product_id'];
             $jsonObj->name = $row['product_name'];
             $jsonObj->price = $row['unit_price'];
             $jsonObj->quantity = $row['unit_quantity'];

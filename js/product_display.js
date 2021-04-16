@@ -72,3 +72,7 @@ function reset_quantity_action() {
     update_display_total()
     update_input_field()
 }
+
+function add_to_cart() {
+    addToCart();
+}

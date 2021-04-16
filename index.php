@@ -424,14 +424,19 @@
                       <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
                       <p id="total-price" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
                   </div>
-                  <button class="add-to-cart-btn">
+                  <button class="add-to-cart-btn" onclick="add_to_cart()">
                       <h3 class="btn-label"> Add To Cart </h3>
                   </button>
               </div>
               <div class="shopping-cart-display">
                   <div class="shopping-cart-window">
-                    <div class="cart-display">
-                    </div>
+                    <ul id="cart-list" class="cart-display" style="padding: 0; margin: 0;">
+                        <li class="cart-list-item " style="margin-top: 0.5rem;">
+                            <p>Name</p>
+                            <p>Quantity</p>
+                            <p>Cost</p>
+                        </li>
+                    </ul>
                   </div>
                   <div class="total-price-label">
                       <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
