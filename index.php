@@ -347,19 +347,48 @@
 
                 <!-- Pet Food Nodes -->
                 <ul id="dogfood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Dry Dog Food (5kg)</li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Dry Dog Food (1kg)</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(5000)">
+                        <h3 class="cell-label cell-header-label">Dry Dog Food</h3>
+                        <p class="cell-label">(5kg)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(5001)">
+                        <h3 class="cell-label cell-header-label">Dry Dog Food</h3>
+                        <p class="cell-label">(1kg)</p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="birdfood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Bird Food</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(5002)">
+                        <h3 class="cell-label cell-header-label">Bird Food</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="catfood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Cat Food</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(5003)">
+                        <h3 class="cell-label cell-header-label">Cat Food</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
                 <ul id="fishfood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)">Fish Food</li>
+                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(5004)">
+                        <h3 class="cell-label cell-header-label">Fish Food</h3>
+                        <p class="cell-label"></p>
+                        <p class="cell-label fade-in-label"> See More
+                            <i class="material-icons icon-navigate-next">navigate_next</i>
+                        </p>
+                    </li>
                 </ul>
-
               </div>
             </div>
 
@@ -367,17 +396,52 @@
             <div class="right-component">
               <div class="product-display">
                   <div class="product-information-window">
-                      <p id="product_title"> Example Text </p>
-                      <p id="unit_price"> Example Text </p>
-                      <p id="unit_quantity"> Example Text </p>
-                      <p id="product_stock"> Example Text </p>
+                      <div class="preview-thumbnail" style="background: blue;"></div>
+                      <div class="product-info">
+                          <div class="title-block">
+                              <h3 id="product_title"> Example Text </h3>
+                          </div>
+                          <div class="price-block">
+                              <p id="unit_price" style="font-size: 30px;"> Example Text </p>
+                          </div>
+                          <div class="sub-product-info">
+                              <hr class="dividing-line">
+                              <p id="unit_quantity"> Example Text </p>
+                              <p id="product_stock"> Example Text </p>
+                          </div>
+                          <div class="plus-minus-input">
+                              <button type="button" class="plus-minus-button" onclick="minus_quantity()">
+                                  <i class="material-icons">remove</i>
+                              </button>
+                              <input id="input-quantity-field" class="quantity-input-field" type="number" name="quantity" value="1">
+                              <button type="button" class="plus-minus-button" onclick="add_quantity()">
+                                  <i class="material-icons">add</i>
+                              </button>
+                          </div>
+                      </div>
                   </div>
-                  <button class="add-to-cart-btn">
+                  <div class="total-price-label">
+                      <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
+                      <p id="total-price" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
+                  </div>
+                  <button class="add-to-cart-btn" onclick="add_to_cart()">
                       <h3 class="btn-label"> Add To Cart </h3>
                   </button>
               </div>
               <div class="shopping-cart-display">
-                  <div class="shopping-cart-window"></div>
+                  <div class="shopping-cart-window">
+                    <ul id="cart-list" class="cart-display" style="padding: 0; margin: 0;">
+                        <li class="cart-list-item " style="margin-top: 0.5rem;">
+                            <p>Name</p>
+                            <p>Quantity</p>
+                            <p>Cost</p>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="total-price-label">
+                      <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
+                      <p id="order-total" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
+                  </div>
                   <div class="cart-action-row">
                       <button class="clear-btn">
                           <h3 class="btn-label"> Clear </h3>
@@ -392,5 +456,7 @@
 
         <script type="text/javascript" src="js/graphic_display.js"></script>
         <script type="text/javascript" src="js/product_loader.js"></script>
+        <script type="text/javascript" src="js/product_display.js"></script>
+        <script type="text/javascript" src="js/virtual_cart.js"></script>
     <body>
 </html>

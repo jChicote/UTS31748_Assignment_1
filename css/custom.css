@@ -14,18 +14,22 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 1rem;
+    overflow: hidden;
 }
 
 .product-display {
-   background: orange;
-   display: grid;
-   grid-template-rows: 2fr 1fr;
+    background: orange;
+    display: grid;
+    grid-template-rows: 60% 20% 20%;
+    overflow: hidden;
 }
 
 .shopping-cart-display {
   background: purple;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  height: 100%;
+  grid-template-rows: 65% 15% 20%;
+  overflow: hidden;
 }
 
 /* For the Left Hand Pane Frame */
@@ -108,37 +112,187 @@
 /* For the Top Right Panel Frame */
 .product-information-window {
     background: beige;
+    margin-left : 1rem;
+    margin-right :1rem;
+    margin-top : 1rem;
+}
+
+.preview-thumbnail {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.product-info {
+    position: relative;
+    text-align: center;
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+/* Info text */
+
+.title-block {
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.sub-product-info {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+#product_title {
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+#unit_price {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dividing-line {
+    width: 90%;
+    margin-left: 0;
+}
+
+.price-block {
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.total-price-label {
+    height: 3rem;
+    background: beige;
     margin: 1rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .add-to-cart-btn {
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     background: red;
 }
 
 .btn-label {
     font-size: 25px;
     color: white;
+    margin: 0;
+}
+
+.plus-minus-input {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    bottom: 1rem;;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity-input-field {
+    text-align: center;
+    width: 40%;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.plus-minus-button {
+    height: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* For the Bottom Right Panel Frame */
 .shopping-cart-window {
     background: beige;
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-display {
+    overflow: auto;
+    height: 100%;
+    display: grid;
+    list-style: none;
+    grid-template-rows: repeat(auto-fill, 60px);
+    grid-row-gap: 1rem;
+    align-items: start;
+}
+
+.cart-list-item {
+    overflow: hidden;
+    list-style:none;
+    background: #99ccff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 3.5rem;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#card-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position:inside;
+    text-align: center;
 }
 
 .cart-action-row {
     display: grid;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    margin: 1rem;
 }
 
 .clear-btn {
     background: grey;
     margin-right: 0.5rem;
+    height: 4rem;
 }
 
 .checkout-btn {
     background: green;
     margin-left: 0.5rem;
+    height: 4rem;
+}
+
+@media screen and (max-width: 1120px) {
+
+    /* For the Top Right Panel Frame */
+    .preview-thumbnail {
+        width: 100%;
+        height: 45%;
+    }
+
+    .product-info {
+        height: 55%;
+        width: 100%%;
+    }
+
 }
