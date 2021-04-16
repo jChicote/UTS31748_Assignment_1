@@ -410,11 +410,11 @@
                               <p id="product_stock"> Example Text </p>
                           </div>
                           <div class="plus-minus-input">
-                              <button type="button" class="plus-minus-button">
+                              <button type="button" class="plus-minus-button" onclick="minus_quantity()">
                                   <i class="material-icons">remove</i>
                               </button>
-                              <input class="quantity-input-field" type="number" name="quantity" value="1">
-                              <button type="button" class="plus-minus-button">
+                              <input id="input-quantity-field" class="quantity-input-field" type="number" name="quantity" value="1">
+                              <button type="button" class="plus-minus-button" onclick="add_quantity()">
                                   <i class="material-icons">add</i>
                               </button>
                           </div>
@@ -422,14 +422,21 @@
                   </div>
                   <div class="total-price-label">
                       <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
-                      <p id="total-price"> $0:00 </p>
+                      <p id="total-price" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
                   </div>
                   <button class="add-to-cart-btn">
                       <h3 class="btn-label"> Add To Cart </h3>
                   </button>
               </div>
               <div class="shopping-cart-display">
-                  <div class="shopping-cart-window"></div>
+                  <div class="shopping-cart-window">
+                    <div class="cart-display">
+                    </div>
+                  </div>
+                  <div class="total-price-label">
+                      <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
+                      <p id="order-total" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
+                  </div>
                   <div class="cart-action-row">
                       <button class="clear-btn">
                           <h3 class="btn-label"> Clear </h3>

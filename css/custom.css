@@ -26,7 +26,8 @@
 .shopping-cart-display {
   background: purple;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 65% 15% 20%;
+  overflow: hidden;
 }
 
 /* For the Left Hand Pane Frame */
@@ -168,6 +169,8 @@
     background: beige;
     margin: 1rem;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -182,6 +185,7 @@
 .btn-label {
     font-size: 25px;
     color: white;
+    margin: 0;
 }
 
 .plus-minus-input {
@@ -219,23 +223,30 @@ input[type=number] {
 /* For the Bottom Right Panel Frame */
 .shopping-cart-window {
     background: beige;
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .cart-action-row {
     display: grid;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    margin: 1rem;
 }
 
 .clear-btn {
     background: grey;
     margin-right: 0.5rem;
+    height: 4rem;
 }
 
 .checkout-btn {
     background: green;
     margin-left: 0.5rem;
+    height: 4rem;
 }
 
 @media screen and (max-width: 1120px) {
