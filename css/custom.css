@@ -246,7 +246,7 @@ input[type=number] {
     background: #99ccff;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 3.5rem;
     vertical-align: middle;
     margin-left: 0.5rem;

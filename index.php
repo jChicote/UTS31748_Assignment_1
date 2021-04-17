@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php include('php/product_search.php');?>
+
         <div class="grid-container">
 
             <!-- Left Component Frame -->
@@ -431,8 +432,9 @@
               <div class="shopping-cart-display">
                   <div class="shopping-cart-window">
                     <ul id="cart-list" class="cart-display" style="padding: 0; margin: 0;">
-                        <li class="cart-list-item " style="margin-top: 0.5rem;">
+                        <li class="cart-list-item" style="margin-top: 0.5rem;">
                             <p>Name</p>
+                            <p>Unit</p>
                             <p>Quantity</p>
                             <p>Cost</p>
                         </li>
@@ -443,7 +445,7 @@
                       <p id="order-total" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
                   </div>
                   <div class="cart-action-row">
-                      <button class="clear-btn">
+                      <button class="clear-btn" onclick="clearCart()">
                           <h3 class="btn-label"> Clear </h3>
                       </button>
                       <button class="checkout-btn">
