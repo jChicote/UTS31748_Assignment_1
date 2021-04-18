@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php include('php/product_search.php');?>
+        <?php include('php/order-form.php');?>
 
         <div class="grid-container">
 
@@ -448,11 +449,39 @@
                       <button class="clear-btn" onclick="clearCart()">
                           <h3 class="btn-label"> Clear </h3>
                       </button>
-                      <button class="checkout-btn">
+                      <button class="checkout-btn" onclick="checkoutCart()">
                           <h3 class="btn-label"> Checkout </h3>
                       </button>
                   </div>
               </div>
+            </div>
+        </div>
+
+        <!-- transparent darkened window -->
+        <div class="dark-background"></div>
+
+        <!-- Modal Window -->
+        <div class="modal-window">
+
+            <!-- Modal Content Form -->
+            <div class="modal-order-content">
+                <div class="modal-order-list">
+                    <ul id="checkout-list" class="cart-display" style="padding: 0; margin: 0;">
+                        <li class="cart-list-item" style="margin-top: 0.5rem;">
+                            <p>Name</p>
+                            <p>Unit</p>
+                            <p>Quantity</p>
+                            <p>Cost</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-action-row">
+                    <button class="finalise-btn">
+                        <h3 class="btn-label"> Finalise </h3>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-form-content">
             </div>
         </div>
 

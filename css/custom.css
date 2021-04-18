@@ -282,6 +282,65 @@ input[type=number] {
     height: 4rem;
 }
 
+/* Modal Form Window*/
+
+.dark-background {
+    display: none;
+    background: black;
+    z-index: 1;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.modal-window {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 60%;
+    overflow: auto;
+    background: orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-order-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+.modal-order-list {
+    background: beige;
+    margin: 1rem;
+}
+
+.modal-action-row {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.finalise-btn {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 13rem;
+    height: 4rem;
+    background: blue;
+}
+
+.modal-form-content {
+    display: none;
+}
+
 @media screen and (max-width: 1120px) {
 
     /* For the Top Right Panel Frame */

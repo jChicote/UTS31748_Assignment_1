@@ -5,6 +5,9 @@ var cartArray = [];
 var cartCount = 0;
 var cartTotal = 0;
 
+// Fields
+var isCheckedOut = false;
+
 function addToCart() {
     //Adds in existing items
     if (checkIfInCart(productObj.id)) {
@@ -54,6 +57,12 @@ function clearCart() {
 }
 
 function checkoutCart() {
+    if (cartArray.length == 0) {
+        alert("There is no products in cart.");
+        return;
+    }
+
+    isCheckedOut = true;
 
 }
 
@@ -68,12 +77,22 @@ function calculateCartTotal() {
 
 function createCartItem() {
     // Item data derives from global variables from the product display.
+    // Additionally inputs and data must be santized to represent their types
+    //
+    // name: string
+    // id: integer
+    // quantity: interger
+    // cost: double / float
     return {name: productObj.name, id: productObj.id, quantity: itemQuantity, cost: quantity_total}
 }
 
 function updateCartTotal() {
     cartTotal = calculateCartTotal();
     document.getElementById("order-total").innerHTML = "$" + cartTotal;
+}
+
+function revealModalDisplay() {
+
 }
 
 
