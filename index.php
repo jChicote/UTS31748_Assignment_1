@@ -12,6 +12,9 @@
         <?php include('php/product_search.php');?>
         <?php include('php/order-form.php');?>
 
+        <!-- Preceeds document structure for function declarations of graphic interface -->
+        <script type="text/javascript" src="js/graphic_display.js"></script>
+
         <div class="grid-container">
 
             <!-- Left Component Frame -->
@@ -458,13 +461,13 @@
         </div>
 
         <!-- transparent darkened window -->
-        <div class="dark-background"></div>
+        <div id="dark-background-overlay" class="dark-background"></div>
 
         <!-- Modal Window -->
-        <div class="modal-window">
+        <div id="modal-window" class="modal-window">
 
             <!-- Modal Content Form -->
-            <div class="modal-order-content">
+            <div id="checkoutContent" class="modal-order-content">
                 <div class="modal-order-list">
                     <ul id="checkout-list" class="cart-display" style="padding: 0; margin: 0;">
                         <li class="cart-list-item" style="margin-top: 0.5rem;">
@@ -475,19 +478,84 @@
                         </li>
                     </ul>
                 </div>
+                <div class="final-total-label">
+                    <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
+                    <p id="checkout-total" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
+                </div>
                 <div class="modal-action-row">
-                    <button class="finalise-btn">
+                    <button class="finalise-btn" onclick="finalisePurchase()">
                         <h3 class="btn-label"> Finalise </h3>
                     </button>
                 </div>
             </div>
-            <div class="modal-form-content">
+
+            <div id="checkoutForm" class="modal-form-content">
+                <h1 class="form-title">Purchase Form</h3>
+                <form>
+                    <table style="margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <td style="padding-right: 1rem;">
+                                <h4 class="form-subheader">First Name:</h4>
+                                <input class="form-input-bar" type="text" name="firstname" value="<?php echo $name;?>">
+                            </td>
+                            <td>
+                                <h4 class="form-subheader">Last Name:</h4>
+                                <input class="form-input-bar" type="text" name="lastname" value="<?php echo $name;?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 class="form-subheader">Address:</h4>
+                                <input class="form-input-bar" type="text" name="address" value="<?php echo $name;?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 class="form-subheader">Suburb:</h4>
+                                <input class="form-input-bar" type="text" name="suburb" value="<?php echo $name;?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 class="form-subheader">State:</h4>
+                            </td>
+                            <td>
+                                <select id="state" name="states">
+                                  <option value="nsw">New South Wales</option>
+                                  <option value="act">Australian Capital Territory</option>
+                                  <option value="mel">Melbourne</option>
+                                  <option value="qns">Queensland</option>
+                                  <option value="sa">South Australia</option>
+                                  <option value="wa">Western Australia</option>
+                                  <option value="nt">Northern Territory</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 class="form-subheader">Country:</h4>
+                            </td>
+                            <td>
+                                <input class="form-input-bar" type="text" name="country" value="<?php echo $name;?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 class="form-subheader">Email:</h4>
+                                <input class="form-input-bar" type="text" name="email" value="<?php echo $name;?>">
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <input class="finalise-btn" type="button" value="Purchase" onclick="location.href='pages/success_submission.html';">
+                    </div>
+                </form>
             </div>
         </div>
 
-        <script type="text/javascript" src="js/graphic_display.js"></script>
         <script type="text/javascript" src="js/product_loader.js"></script>
         <script type="text/javascript" src="js/product_display.js"></script>
         <script type="text/javascript" src="js/virtual_cart.js"></script>
+        <script type="text/javascript" src="js/modal_finalise_display.js"></script>
     <body>
 </html>

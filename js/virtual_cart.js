@@ -9,6 +9,8 @@ var cartTotal = 0;
 var isCheckedOut = false;
 
 function addToCart() {
+    if (cartArray.length == 0) return;
+
     //Adds in existing items
     if (checkIfInCart(productObj.id)) {
         addToExistingItem(productObj.id, itemQuantity, quantity_total);
@@ -63,7 +65,8 @@ function checkoutCart() {
     }
 
     isCheckedOut = true;
-
+    revealModalDisplay();
+    displayFinalCheckoutList();
 }
 
 function calculateCartTotal() {
@@ -92,7 +95,10 @@ function updateCartTotal() {
 }
 
 function revealModalDisplay() {
-
+    var darkOverlay = document.getElementById("dark-background-overlay");
+    darkOverlay.style.display = "block";
+    var modalWindow = document.getElementById("modal-window");
+    modalWindow.style.display = "block";
 }
 
 
