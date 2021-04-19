@@ -1,3 +1,19 @@
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h4 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .grid-container {
     height: 90vh;
     margin: 2rem;
@@ -246,7 +262,7 @@ input[type=number] {
     background: #99ccff;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 3.5rem;
     vertical-align: middle;
     margin-left: 0.5rem;
@@ -281,6 +297,102 @@ input[type=number] {
     margin-left: 0.5rem;
     height: 4rem;
 }
+
+/* Modal Form Window*/
+
+.dark-background {
+    display: none;
+    background: black;
+    z-index: 1;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.modal-window {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 60%;
+    overflow: auto;
+    background: orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-order-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70% 10% 20%;
+}
+
+.modal-order-list {
+    background: beige;
+    margin: 1rem;
+}
+
+.modal-action-row {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.final-total-label {
+    background: beige;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.finalise-btn {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 13rem;
+    height: 4rem;
+    background: blue;
+}
+
+.modal-form-content {
+    display: none;
+    padding: 2rem;
+}
+
+.form-table {
+    margin: 0;
+}
+
+.form-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.form-subheader {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-input-bar {
+    height: 2rem;
+    width: 100%;
+}
+
+.purchase-btn {
+
+}
+
 
 @media screen and (max-width: 1120px) {
 

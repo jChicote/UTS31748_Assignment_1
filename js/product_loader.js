@@ -7,6 +7,7 @@ var available_stock = 0
 
 // Retrieves search queries for processing
 function display_product(productID) {
+    if (isCheckedOut) return;
     var xhttp = new XMLHttpRequest()
 
     xhttp.onreadystatechange = function() {
