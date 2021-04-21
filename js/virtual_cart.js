@@ -1,31 +1,44 @@
 
-// Cart Item object
-var cartItem = {name: "No Name", product_id: 0000, quantity: 0};
-var cartArray = [];
-var cartCount = 0;
-var cartTotal = 0;
-
 // Fields
 var isCheckedOut = false;
+var virtualCart = {
+    cartArray: [],
+    purchaseTotal: 0.0
+}
 
 function addToCart() {
-    if (cartArray.length == 0) return;
+    if (checkIsEmpty()) return;
 
     //Adds in existing items
-    if (checkIfInCart(productObj.id)) {
-        addToExistingItem(productObj.id, itemQuantity, quantity_total);
+    if (checkIfInCart(selectedProduct.id)) {
+        addToExistingItem(
+            selectedProduct.id,
+            purchaseItem.purchaseQuantity,
+            purchaseItem.totalSelectionCost );
         updateCartTotal();
         return;
     }
 
+    displayInCart();
+}
+
+function checkIsEmpty() {
+    if (selectedProduct == "" || selectedProduct == undefined) {
+        alert("Product has not been selected");
+        return true;
+    }
+
+    return false;
+}
+
+function displayInCart() {
     var list = document.getElementById("cart-list");
     var newItem = createCartItem();
 
     var listChild = createHTMLCartCell(newItem);
     list.appendChild(listChild);
-    cartArray.push(newItem);
+    virtualCart.cartArray.push(newItem);
     updateCartTotal();
-    cartCount++;
 }
 
 // Adds the quantity to the existing cart item
@@ -33,20 +46,20 @@ function addToCart() {
 function addToExistingItem(id, quantity, cost) {
     var HTMLcell = document.getElementById(id);
 
-    for (i = 0; i < cartArray.length; i++) {
-        if (cartArray[i].id === id) {
-            cartArray[i].quantity = parseInt(cartArray[i].quantity) + parseInt(itemQuantity);
-            cartArray[i].cost = parseInt(cartArray[i].cost) + parseInt(quantity_total);
+    for (i = 0; i < virtualCart.cartArray.length; i++) {
+        if (virtualCart.cartArray[i].id === id) {
+            virtualCart.cartArray[i].quantity = parseInt(virtualCart.cartArray[i].quantity) + parseInt(quantity);
+            virtualCart.cartArray[i].cost += parseFloat(cost);
 
-            HTMLcell.childNodes[2].innerHTML = cartArray[i].quantity;
-            HTMLcell.childNodes[3].innerHTML = "$" + cartArray[i].cost;
+            HTMLcell.childNodes[2].innerHTML = virtualCart.cartArray[i].quantity;
+            HTMLcell.childNodes[3].innerHTML = "$" + virtualCart.cartArray[i].cost.toFixed(2);
         }
     }
 }
 
 function checkIfInCart(id) {
-    for (i = 0; i < cartArray.length; i++) {
-        if (cartArray[i].id === id) return true;
+    for (i = 0; i < virtualCart.cartArray.length; i++) {
+        if (virtualCart.cartArray[i].id === id) return true;
     }
 
     return false;
@@ -55,11 +68,12 @@ function checkIfInCart(id) {
 function clearCart() {
     var list = document.getElementById("cart-list");
     list.innerHTML = "";
-    cartArray = [];
+    virtualCart.cartArray = [];
+    virtualCart.purchaseTotal = 0;
 }
 
 function checkoutCart() {
-    if (cartArray.length == 0) {
+    if (virtualCart.cartArray.length == 0) {
         alert("There is no products in cart.");
         return;
     }
@@ -70,11 +84,10 @@ function checkoutCart() {
 }
 
 function calculateCartTotal() {
-    var total = 0;
-    for (i = 0; i < cartArray.length; i++) {
-        total += parseInt(cartArray[i].cost);
+    var total = 0.0;
+    for (i = 0; i < virtualCart.cartArray.length; i++) {
+        total += virtualCart.cartArray[i].cost;
     }
-
     return total;
 }
 
@@ -82,23 +95,17 @@ function createCartItem() {
     // Item data derives from global variables from the product display.
     // Additionally inputs and data must be santized to represent their types
     //
-    // name: string
-    // id: integer
-    // quantity: interger
-    // cost: double / float
-    return {name: productObj.name, id: productObj.id, quantity: itemQuantity, cost: quantity_total}
+    return {
+        name: selectedProduct.name,
+        id: selectedProduct.id,
+        quantity: purchaseItem.purchaseQuantity,
+        cost: parseFloat(purchaseItem.totalSelectionCost)
+    };
 }
 
 function updateCartTotal() {
-    cartTotal = calculateCartTotal();
-    document.getElementById("order-total").innerHTML = "$" + cartTotal;
-}
-
-function revealModalDisplay() {
-    var darkOverlay = document.getElementById("dark-background-overlay");
-    darkOverlay.style.display = "block";
-    var modalWindow = document.getElementById("modal-window");
-    modalWindow.style.display = "block";
+    virtualCart.purchaseTotal = calculateCartTotal();
+    document.getElementById("order-total").innerHTML = "$" + parseFloat(virtualCart.purchaseTotal).toFixed(2);
 }
 
 
@@ -116,26 +123,13 @@ function createHTMLCartCell(cartItem) {
     costLabel.setAttribute('id', "cost");
 
     nameLabel.innerHTML = cartItem.name;
-    unitLabel.innerHTML = "(" + productObj.quantity + ")"
+    unitLabel.innerHTML = "(" + selectedProduct.quantity + ")"
     quantityLabel.innerHTML = cartItem.quantity;
-    costLabel.innerHTML = "$" + cartItem.cost;
+    costLabel.innerHTML = "$" + cartItem.cost.toFixed(2);
 
     listChild.appendChild(nameLabel);
     listChild.appendChild(unitLabel);
     listChild.appendChild(quantityLabel);
     listChild.appendChild(costLabel);
     return listChild;
-}
-
-
-// ACTIONS BELOW ARE FOR COMPLETION TASKS AFTER Checkout
-//
-// Note: Can only run when products are present in list
-
-function is_cart_valid() {
-
-}
-
-function display_fail_message() {
-
 }

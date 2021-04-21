@@ -33,7 +33,3 @@ function revealSubItems(valueID) {
 function onMouseOverProduct(productCell) {
     productCell.style.background = "green"
 }
-
-function refreshProductInfoDisplay() {
-    
-}

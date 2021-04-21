@@ -2,6 +2,7 @@
 
     $selectedID = $_REQUEST["id"];
     $productSelection;
+    //$connection = mysqli_connect('aa2cvpn3f795tl.coexuuj2esc1.us-east-1.rds.amazonaws.com', 'jaiden', 'chicote12345', 'store', '3306');
     $connection = mysqli_connect('localhost', 'jaiden', 'chicote', 'store');
 
     // Encodes search result into a JSON object

@@ -7,10 +7,13 @@
 
         <link href="css/custom.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <?php include('php/product_search.php');?>
-        <?php include('php/order-form.php');?>
+        <?php include('order-form.php');?>
 
         <!-- Preceeds document structure for function declarations of graphic interface -->
         <script type="text/javascript" src="js/graphic_display.js"></script>
@@ -20,7 +23,7 @@
             <!-- Left Component Frame -->
             <div class="left-component">
               <div class="header-cell">
-                  <h1 class="header-title"> This is the Market </h1>
+                  <h1 class="header-title"> Welcome To GoMart </h1>
               </div>
               <div class="market-graphic">
                   <!-- Primary Categories -->
@@ -496,23 +499,23 @@
                         <tr>
                             <td style="padding-right: 1rem;">
                                 <h4 class="form-subheader">First Name:</h4>
-                                <input class="form-input-bar" type="text" name="firstname" value="<?php echo $name;?>">
+                                <input id="firstname" class="form-input-bar" type="text" name="firstname" required>
                             </td>
                             <td>
                                 <h4 class="form-subheader">Last Name:</h4>
-                                <input class="form-input-bar" type="text" name="lastname" value="<?php echo $name;?>">
+                                <input id="lastname"class="form-input-bar" type="text" name="lastname" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <h4 class="form-subheader">Address:</h4>
-                                <input class="form-input-bar" type="text" name="address" value="<?php echo $name;?>">
+                                <input id="address" class="form-input-bar" type="text" name="address" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <h4 class="form-subheader">Suburb:</h4>
-                                <input class="form-input-bar" type="text" name="suburb" value="<?php echo $name;?>">
+                                <input id="suburb" class="form-input-bar" type="text" name="suburb" required>
                             </td>
                         </tr>
                         <tr>
@@ -536,26 +539,28 @@
                                 <h4 class="form-subheader">Country:</h4>
                             </td>
                             <td>
-                                <input class="form-input-bar" type="text" name="country" value="<?php echo $name;?>">
+                                <input id="country" class="form-input-bar" type="text" name="country" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <h4 class="form-subheader">Email:</h4>
-                                <input class="form-input-bar" type="text" name="email" value="<?php echo $name;?>">
+                                <input id="email"class="form-input-bar" type="text" name="email" required>
                             </td>
                         </tr>
                     </table>
                     <div style="text-align: center; margin-top: 1rem;">
-                        <input class="finalise-btn" type="button" value="Purchase" onclick="location.href='pages/success_submission.html';">
+                        <input id="formSubmitBtn" class="finalise-btn" type="button" name="submit" value="Purchase" onclick="validateFormDetails()">
                     </div>
                 </form>
             </div>
         </div>
 
+
         <script type="text/javascript" src="js/product_loader.js"></script>
         <script type="text/javascript" src="js/product_display.js"></script>
         <script type="text/javascript" src="js/virtual_cart.js"></script>
         <script type="text/javascript" src="js/modal_finalise_display.js"></script>
+        <script type="text/javascript" src="js/order_form_validation.js"></script>
     <body>
 </html>

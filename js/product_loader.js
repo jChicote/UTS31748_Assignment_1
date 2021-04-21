@@ -1,9 +1,6 @@
 
 // Fields
-var productObj;
-var product_price = 0
-var quantity_total = 0
-var available_stock = 0
+var selectedProduct;
 
 // Retrieves search queries for processing
 function display_product(productID) {
@@ -12,25 +9,37 @@ function display_product(productID) {
 
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            productObj = JSON.parse(xhttp.responseText)
-            document.getElementById("product_title").innerHTML = productObj.name
-            document.getElementById("unit_price").innerHTML = "$" + productObj.price
-            document.getElementById("unit_quantity").innerHTML = "Quantity: " + productObj.quantity
-            document.getElementById("product_stock").innerHTML = "In Stock: " + productObj.stock
+            var productJSON = JSON.parse(xhttp.responseText)
 
-            set_display_data(productObj)
+            setProductLiteral(productJSON);
+            setProductPanelDetails();
+            update_display_total()
+            reset_quantity_action()
         }
     };
 
-    xhttp.open("GET", "php/product_search.php?id= " + productID, true);
+    xhttp.open("GET", "php/product_search.php?id=" + productID, true);
     xhttp.send();
 }
 
-// Sets the data to global variabels for usage on top-right hand frame
-function set_display_data(messageObj) {
-    product_price = productObj.price
-    quantity_total = productObj.price
-    available_stock = productObj.stock
-    update_display_total()
-    reset_quantity_action()
+function setProductLiteral(jsonObj) {
+    selectedProduct = {
+        id: parseInt(jsonObj.id),
+        name: jsonObj.name,
+        quantity: jsonObj.quantity,
+        price: parseFloat(jsonObj.price),
+        stock: parseInt(jsonObj.stock),
+
+        calculateSpecifiedQuantity: function (amount) {
+            let total = parseFloat(amount * this.price);
+            return total.toFixed(2);
+        }
+    };
+}
+
+function setProductPanelDetails() {
+    document.getElementById("product_title").innerHTML = selectedProduct.name
+    document.getElementById("unit_price").innerHTML = "$" + selectedProduct.price
+    document.getElementById("unit_quantity").innerHTML = "Quantity: " + selectedProduct.quantity
+    document.getElementById("product_stock").innerHTML = "In Stock: " + selectedProduct.stock
 }
