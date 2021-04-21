@@ -48,13 +48,23 @@ function addToExistingItem(id, quantity, cost) {
 
     for (i = 0; i < virtualCart.cartArray.length; i++) {
         if (virtualCart.cartArray[i].id === id) {
-            virtualCart.cartArray[i].quantity = parseInt(virtualCart.cartArray[i].quantity) + parseInt(quantity);
-            virtualCart.cartArray[i].cost += parseFloat(cost);
+            if (virtualCart.cartArray[i].cost += parseFloat(cost) > selectedProduct.stock) {
+                threshPurchaseAmount(i);
+            } else {
+                virtualCart.cartArray[i].quantity = parseInt(virtualCart.cartArray[i].quantity) + parseInt(quantity);
+                virtualCart.cartArray[i].cost += parseFloat(cost);
+            }
 
             HTMLcell.childNodes[2].innerHTML = virtualCart.cartArray[i].quantity;
             HTMLcell.childNodes[3].innerHTML = "$" + virtualCart.cartArray[i].cost.toFixed(2);
         }
     }
+}
+
+// Ceils the cost to the maximum allowed
+function threshPurchaseAmount(index) {
+    virtualCart.cartArray[index].cost = selectedProduct.getMaximumCost();
+    virtualCart.cartArray[index].quantity = selectedProduct.stock;
 }
 
 function checkIfInCart(id) {

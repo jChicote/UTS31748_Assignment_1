@@ -33,6 +33,11 @@ function setProductLiteral(jsonObj) {
         calculateSpecifiedQuantity: function (amount) {
             let total = parseFloat(amount * this.price);
             return total.toFixed(2);
+        },
+
+        getMaximumCost: function() {
+            let total = parseFloat(this.stock * this.price);
+            return total;
         }
     };
 }
