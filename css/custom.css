@@ -1,12 +1,16 @@
-p {
-    font-family: 'Noto Sans KR', sans-serif;
+/* Fonts */
+
+@font-face {
+    font-family: "Poppins-Black700";
+    src: url("/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium500";
+    src: url("/fonts/Poppins-Medium.ttf") format("TrueType");
 }
 
 h1 {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-h3 {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -51,20 +55,8 @@ body {
   border-radius: 20px;
   display: grid;
   height: 100%;
-  grid-template-rows: 65% 15% 20%;
+  grid-template-rows: 62% 18% 20%;
   box-shadow: 0 4px 15px 0 rgba(184, 51, 0, 0.5);
-}
-
-/* Fonts */
-
-@font-face {
-    font-family: "Poppins-Black700";
-    src: url("/fonts/Poppins-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Poppins-Medium500";
-    src: url("/fonts/Poppins-Medium.ttf");
 }
 
 /* For the Left Hand Pane Frame */
@@ -143,6 +135,7 @@ body {
 
 .product_cell {
     /*box-shadow: 0 15px 50px 0px rgba(125, 67, 29, 0.4) !important;*/
+    padding: 1rem;
     box-shadow: rgba(148, 143, 13, 0.3) 0px 19px 38px, rgba(148, 143, 13, 0.22) 0px 15px 12px;
 }
 
@@ -217,15 +210,19 @@ body {
     margin-left : 1rem;
     margin-right :1rem;
     margin-top : 1rem;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.9) 0px 8px 16px -8px;
 }
 
 .preview-thumbnail {
     float: left;
     width: 40%;
     height: 100%;
+    border-radius: 14px 0 0 14px;
 }
 
 .product-info {
+    font-family: "Poppins-Medium500" !important;
     position: relative;
     text-align: center;
     float: left;
@@ -233,31 +230,23 @@ body {
     width: 60%;
 }
 
-.product-footer {
-    margin-top: 0;
-    text-align: center;
-}
-
 .add-product-icon {
-    rotation-point: 50% 50%;
+    margin-top: 1rem;
     color: white;
     opacity: 0;
-    position: relative;
-    transform: scale(0);
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%);
+    transform: scale(1);
 }
 
 .category-cell:hover > .add-product-icon {
     opacity: 100%;
-    transform: scale(2);
+transform: scale(2);
     transition: 1s;
 }
 
 /* Info text */
 
 .title-block {
+    font-family: "Poppins-Medium500" !important;
     width: 100%;
     text-align: left;
     margin-left: 1rem;
@@ -275,8 +264,12 @@ body {
 }
 
 #unit_price {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#unit_quantity {
+    margin-top: 0.5rem;
 }
 
 .dividing-line {
@@ -291,24 +284,28 @@ body {
 }
 
 .total-price-label {
-    height: 3rem;
+    height: 3.5rem;
     background: beige;
     margin: 1rem;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    border-radius: 7px;
+    font-family: "Poppins-Medium500" !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 .add-to-cart-btn {
+    border-radius: 15px;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    background: red;
+    background: #FF665A;
 }
 
 .btn-label {
+    font-family: "Poppins-Medium500";
     font-size: 25px;
     color: white;
     margin: 0;
@@ -339,6 +336,8 @@ input[type=number] {
 }
 
 .plus-minus-button {
+    background: #292928;
+    color: white;
     height: 100%;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -365,8 +364,9 @@ input[type=number] {
 }
 
 .cart-list-item {
+    font-family: "Poppins-Medium500";
     overflow: hidden;
-    list-style:none;
+    list-style: none;
     background: #99ccff;
     text-align: center;
     display: grid;
@@ -395,12 +395,14 @@ input[type=number] {
 }
 
 .clear-btn {
+    border-radius: 15px;
     background: grey;
     margin-right: 0.5rem;
     height: 4rem;
 }
 
 .checkout-btn {
+    border-radius: 15px;
     background: green;
     margin-left: 0.5rem;
     height: 4rem;
