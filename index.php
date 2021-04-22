@@ -501,7 +501,7 @@
             <div class="right-component">
               <div class="product-display">
                   <div class="product-information-window">
-                      <div class="preview-thumbnail" style="background: blue;"></div>
+                      <!--<div class="preview-thumbnail" style="background: blue;"></div>-->
                       <div class="product-info">
                           <div class="title-block">
                               <h3 id="product_title"> Product Title </h3>
@@ -536,11 +536,11 @@
               <div class="shopping-cart-display">
                   <div class="shopping-cart-window">
                     <ul id="cart-list" class="cart-display" style="padding: 0; margin: 0;">
-                        <li class="cart-list-item" style="margin-top: 0.5rem;">
-                            <p style="font-family: "Poppins-Bold700";">Name</p>
-                            <p style="font-family: "Poppins-Bold700";">Unit</p>
-                            <p style="font-family: "Poppins-Bold700";">Quantity</p>
-                            <p style="font-family: "Poppins-Bold700";">Cost</p>
+                        <li class="cart-list-item cart-list-header-item">
+                            <p class="cart-head-label">Name</p>
+                            <p class="cart-head-label">Unit</p>
+                            <p class="cart-head-label">Quantity</p>
+                            <p class="cart-head-label">Cost</p>
                         </li>
                     </ul>
                   </div>
@@ -571,14 +571,14 @@
                 <div class="modal-order-list">
                     <ul id="checkout-list" class="cart-display" style="padding: 0; margin: 0;">
                         <li class="cart-list-item" style="margin-top: 0.5rem;">
-                            <p>Name</p>
-                            <p>Unit</p>
-                            <p>Quantity</p>
-                            <p>Cost</p>
+                            <p class="cart-head-label">Name</p>
+                            <p class="cart-head-label">Unit</p>
+                            <p class="cart-head-label">Quantity</p>
+                            <p class="cart-head-label">Cost</p>
                         </li>
                     </ul>
                 </div>
-                <div class="final-total-label">
+                <div class="final-total-label ">
                     <h3 style="margin-left: 1rem; float: left; margin-top: 0; margin-bottom: 0;">Total:</h3>
                     <p id="checkout-total" style="text-align: right; margin-right: 1rem;"> $0:00 </p>
                 </div>
@@ -595,29 +595,29 @@
                     <table style="margin-left: auto; margin-right: auto;">
                         <tr>
                             <td style="padding-right: 1rem;">
-                                <h4 class="form-subheader">First Name:</h4>
+                                <h5 class="form-subheader">First Name:</h5>
                                 <input id="firstname" class="form-input-bar" type="text" name="firstname" required>
                             </td>
                             <td>
-                                <h4 class="form-subheader">Last Name:</h4>
+                                <h5 class="form-subheader">Last Name:</h5>
                                 <input id="lastname"class="form-input-bar" type="text" name="lastname" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <h4 class="form-subheader">Address:</h4>
+                                <h5 class="form-subheader">Address:</h5>
                                 <input id="address" class="form-input-bar" type="text" name="address" required>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <h4 class="form-subheader">Suburb:</h4>
+                                <h5 class="form-subheader">Suburb:</h5>
                                 <input id="suburb" class="form-input-bar" type="text" name="suburb" required>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4 class="form-subheader">State:</h4>
+                                <h5 class="form-subheader">State:</h5>
                             </td>
                             <td>
                                 <select id="state" name="states">
@@ -633,7 +633,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <h4 class="form-subheader">Country:</h4>
+                                <h5 class="form-subheader">Country:</h5>
                             </td>
                             <td>
                                 <input id="country" class="form-input-bar" type="text" name="country" required>
@@ -641,13 +641,13 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <h4 class="form-subheader">Email:</h4>
+                                <h5 class="form-subheader">Email:</h5>
                                 <input id="email"class="form-input-bar" type="text" name="email" required>
                             </td>
                         </tr>
                     </table>
                     <div style="text-align: center; margin-top: 1rem;">
-                        <input id="formSubmitBtn" class="finalise-btn" type="button" name="submit" value="Purchase" onclick="validateFormDetails()">
+                        <input id="formSubmitBtn" class="purchase-btn" type="button" name="submit" value="Purchase" onclick="validateFormDetails()">
                     </div>
                 </form>
             </div>

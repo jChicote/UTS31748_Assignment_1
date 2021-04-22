@@ -26,8 +26,8 @@ function finalisePurchase() {
 function displayForm() {
     hideCheckoutList();
     var modalWindow = document.getElementById("modal-window");
-    modalWindow.style.background = "beige";
-    modalWindow.style.width = "40%";
+    modalWindow.style.background = "#D9D9D9";
+    modalWindow.style.width = "522px";
     modalWindow.style.height = "63%";
     modalWindow.style.transition = "1s";
 

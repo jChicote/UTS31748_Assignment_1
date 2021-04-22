@@ -377,6 +377,14 @@ input[type=number] {
     margin-right: 0.5rem;
 }
 
+.cart-list-header-item {
+    margin-top: 0.5rem;
+}
+
+.cart-head-label {
+    font-family: "Poppins-Black700";
+}
+
 #card-list {
     margin: 0;
     padding: 0;
@@ -433,7 +441,8 @@ input[type=number] {
     width: 70%;
     height: 60%;
     overflow: auto;
-    background: orange;
+    background: #30302f;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -441,12 +450,13 @@ input[type=number] {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 70% 10% 20%;
+    grid-template-rows: 65% 15% 20%;
 }
 
 .modal-order-list {
     background: beige;
     margin: 1rem;
+    border-radius: 15px;
 }
 
 .modal-action-row {
@@ -456,12 +466,14 @@ input[type=number] {
 
 .final-total-label {
     background: beige;
-    height: 3rem;
+    height: 3.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    font-family: "Poppins-Medium500" !important;
+    border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -472,7 +484,8 @@ input[type=number] {
     margin-right: 1rem;
     width: 13rem;
     height: 4rem;
-    background: blue;
+    background: #F2B705;
+    border-radius: 10px;
 }
 
 .modal-form-content {
@@ -487,11 +500,15 @@ input[type=number] {
 .form-title {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-family: "Poppins-Black700" !important;
+    text-align: center;
 }
 
 .form-subheader {
+    font-family: "Poppins-Medium500" !important;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    font-size: 15px;
 }
 
 .form-input-bar {
@@ -500,7 +517,14 @@ input[type=number] {
 }
 
 .purchase-btn {
-
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 10rem;
+    height: 3rem;
+    background: #F2B705;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins-Medium500" !important;
 }
 
 /* Thank-You Conclusion Page */
@@ -511,6 +535,18 @@ input[type=number] {
     transform: translate(-50%, -50%);
     position: fixed;
     text-align: center;
+}
+
+.ending-message {
+    color: #4B3617;
+    font-family: "Poppins-Medium500" !important;
+}
+
+.ending-button {
+    font-family: "Poppins-Medium500";
+    font-size: 15px;
+    color: white;
+    margin: 0;
 }
 
 
