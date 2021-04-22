@@ -23,130 +23,192 @@
             <!-- Left Component Frame -->
             <div class="left-component">
               <div class="header-cell">
-                  <h1 class="header-title"> Welcome To GoMart </h1>
+                  <h1 class="header-title">
+                      <span> Welcome To </span>
+                      <span style="color: #ff5100"> GoMart </span>
+                  </h1>
               </div>
               <div class="market-graphic">
                   <!-- Primary Categories -->
                 <ul id="primecategory" class="display-row">
                     <li data-value="frozen" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Frozen Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-header">
+                            <i class="material-icons category-icons">ac_unit</i>
+                            <p class="category-heading">Frozen Food</p>
+                        </div>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li data-value="fresh" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Fresh Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-header">
+                            <i class="material-icons category-icons">food_bank</i>
+                            <p class="category-heading">Fresh Food</p>
+                        </div>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li data-value="beverages" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Beverages</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-header">
+                            <i class="material-icons category-icons">local_drink</i>
+                            <p class="category-heading">Beverages</p>
+                        </div>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li data-value="home" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Home Health</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-header">
+                            <i class="material-icons category-icons">holiday_village</i>
+                            <p class="category-heading">Home Health</p>
+                        </div>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li data-value="pet" class="category-cell" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Pet Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-header">
+                            <i class="material-icons category-icons">pets</i>
+                            <p class="category-heading">Pet Food</p>
+                        </div>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
 
                 <!-- Sub Item Display Rows -->
                 <ul id="frozen" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Sea Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <p class="category-heading">Sea Food</p>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Milk Products</p>
-                        <i class="material-icons">expand_more</i>
+                        <p class="category-heading">Milk Products</p>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p>Other</p>
-                        <i class="material-icons">expand_more</i>
+                        <p class="category-heading">Other</p>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
                 <ul id="fresh" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="meats" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Meats</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="dairy" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Dairy</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="fruits" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Fruits</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
                 <ul id="beverages" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="coffee" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Coffee</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="tea" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Tea</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="chocolate" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Chocolate</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
                 <ul id="home" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="medicine" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Medicine</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="bathroom" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Bathroom</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="plasticbags" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Plastic Bags</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="laundry" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Laundry</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
                 <ul id="pet" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="dogfood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Dog Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="birdfood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Bird Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                     <li class="category-cell" data-value="catfood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Cat Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                         </li>
                     <li class="category-cell" data-value="fishfood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
                         <p>Fish Food</p>
-                        <i class="material-icons">expand_more</i>
+                        <div class="category-footer">
+                            <i class="material-icons down_icon">expand_more</i>
+                        </div>
                     </li>
                 </ul>
 
                 <!-- Frozen Items Nodes -->
                 <ul id="seafood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
+                    <li class="category-cell  product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
                         <h3 class="cell-label cell-header-label">Fish Fingers</h3>
                         <p class="cell-label">(large)</p>
                         <p class="cell-label fade-in-label"> See More
                             <i class="material-icons icon-navigate-next">navigate_next</i>
                         </p>
                     </li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1001)">
+                    <li class="category-cell  product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1001)">
                         <h3 class="cell-label cell-header-label">Fish Fingers</h3>
                         <p class="cell-label">(small)</p>
                         <p class="cell-label fade-in-label"> See More
                             <i class="material-icons icon-navigate-next">navigate_next</i>
                         </p>
                     </li>
-                    <li class="category-cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1003)">
+                    <li class="category-cell product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1003)">
                         <h3 class="cell-label cell-header-label">Shelled Prawns</h3>
                         <p class="cell-label"></p>
                         <p class="cell-label fade-in-label"> See More
