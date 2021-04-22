@@ -81,19 +81,25 @@
                 <!-- Sub Item Display Rows -->
                 <ul id="frozen" class="display-row sub-display-items" style="display: none;">
                     <li class="category-cell" data-value="seafood" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p class="category-heading">Sea Food</p>
+                        <div class="category-header">
+                            <p class="category-heading">Sea Food</p>
+                        </div>
                         <div class="category-footer">
                             <i class="material-icons down_icon">expand_more</i>
                         </div>
                     </li>
                     <li class="category-cell" data-value="milkproducts" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p class="category-heading">Milk Products</p>
+                        <div class="category-header">
+                            <p class="category-heading">Milk Products</p>
+                        </div>
                         <div class="category-footer">
                             <i class="material-icons down_icon">expand_more</i>
                         </div>
                     </li>
                     <li class="category-cell" data-value="other" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
-                        <p class="category-heading">Other</p>
+                        <div class="category-header">
+                            <p class="category-heading">Other</p>
+                        </div>
                         <div class="category-footer">
                             <i class="material-icons down_icon">expand_more</i>
                         </div>
@@ -194,12 +200,14 @@
 
                 <!-- Frozen Items Nodes -->
                 <ul id="seafood" class="display-row sub-display-items" style="display: none;">
-                    <li class="category-cell  product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
-                        <h3 class="cell-label cell-header-label">Fish Fingers</h3>
-                        <p class="cell-label">(large)</p>
-                        <p class="cell-label fade-in-label"> See More
-                            <i class="material-icons icon-navigate-next">navigate_next</i>
-                        </p>
+                    <li class="category-cell product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1000)">
+                        <div class="category-header">
+                            <h3 class="cell-label cell-header-label">Fish Fingers</h3>
+                            <p class="cell-label">(large)</p>
+                        </div>
+                        <div class="product-footer">
+                            <i class="material-icons icon-navigate-next add-product-icon">add</i>
+                        </div>
                     </li>
                     <li class="category-cell  product_cell" onmouseover="onMouseOverProduct(this)" onmouseout="onMouseOut(this)" onclick="display_product(1001)">
                         <h3 class="cell-label cell-header-label">Fish Fingers</h3>

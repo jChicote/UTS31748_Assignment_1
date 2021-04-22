@@ -31,5 +31,5 @@ function revealSubItems(valueID) {
 /* Product Graphic Interaction */
 
 function onMouseOverProduct(productCell) {
-    productCell.style.background = "#2f55ed"
+    productCell.style.background = "#2f55ed";
 }

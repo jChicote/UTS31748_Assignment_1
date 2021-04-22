@@ -154,6 +154,7 @@ body {
 
 .category-header {
     margin-top: 3rem;
+    color: #202731;
 }
 
 .category-footer {
@@ -183,15 +184,15 @@ body {
 }
 
 .cell-label {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Poppins-Medium500";
 }
 
 .cell-header-label {
-    margin-top: 25%;
+    margin-top: 0;
 }
 
 .category-cell:hover > .cell-header-label {
-    margin-top: 10px;
+    color: white;
     transition: 1s;
 }
 
@@ -230,6 +231,28 @@ body {
     float: left;
     height: 100%;
     width: 60%;
+}
+
+.product-footer {
+    margin-top: 0;
+    text-align: center;
+}
+
+.add-product-icon {
+    rotation-point: 50% 50%;
+    color: white;
+    opacity: 0;
+    position: relative;
+    transform: scale(0);
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+.category-cell:hover > .add-product-icon {
+    opacity: 100%;
+    transform: scale(2);
+    transition: 1s;
 }
 
 /* Info text */
