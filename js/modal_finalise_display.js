@@ -1,15 +1,22 @@
 
-function displayFinalCheckoutList() {
+function revealModalDisplay() {
+    var darkOverlay = document.getElementById("dark-background-overlay");
+    darkOverlay.style.display = "block";
+    var modalWindow = document.getElementById("modal-window");
+    modalWindow.style.display = "block";
+}
+
+function displayFinalCheckoutList(cart) {
     var checkoutList = document.getElementById("checkout-list");
     var totalLabel = document.getElementById("checkout-total");
 
     var listElement;
-    for (i = 0; i < cartArray.length; i++) {
-        listElement = createHTMLCartCell(cartArray[i]);
+    for (i = 0; i < virtualCart.cartArray.length; i++) {
+        listElement = createHTMLCartCell(virtualCart.cartArray[i]);
         checkoutList.appendChild(listElement);
     }
 
-    totalLabel.innerHTML = "$" + cartTotal;
+    totalLabel.innerHTML = "$" + virtualCart.purchaseTotal;
 }
 
 function finalisePurchase() {

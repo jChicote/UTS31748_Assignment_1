@@ -2,14 +2,14 @@
 /* Category Graphic Interaction*/
 
 function onMouseOver(rowcell) {
-    rowcell.style.background = "red"
+    rowcell.style.background = "#ed9164"
 
     hideSubItems(rowcell.parentNode.id);
     revealSubItems(rowcell.dataset.value);
 }
 
 function onMouseOut(rowcell) {
-    rowcell.style.background = "white"
+    rowcell.style.background = "#FFFCE6"
 }
 
 function hideSubItems(ignore) {
@@ -31,9 +31,5 @@ function revealSubItems(valueID) {
 /* Product Graphic Interaction */
 
 function onMouseOverProduct(productCell) {
-    productCell.style.background = "green"
-}
-
-function refreshProductInfoDisplay() {
-    
+    productCell.style.background = "#2f55ed";
 }
