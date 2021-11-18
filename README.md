@@ -1,24 +1,23 @@
 # UTS31748_Assignment_1
-Short blurb of your project. This repository was created to demonstrate to students an example for organizing your repository when submitting assignments. Take the advice provided here as a guideline.
 
-Longer descriptions of your project can be helpful to include. Writing about your project can cover the 5 w's: who, what, when, where, why and also how.
+![GitHub last commit](https://img.shields.io/github/last-commit/jChicote/UTS31748_Assignment_1)
 
-Author notes. This repository was created by Professor Katherine Chuang for use with teaching  at Brooklyn College's Department of CIS.
+## About the project
 
-# Installation
+#### 1. Introduction
 
-When "shipping your code", you may be sending your code off to a teammate in addition to the end user. It helps to think in their shoes. What do they need to be able to compile your code? What file(s) should be compiled and how does one do that?
+This website was developed as an assignment project for the UTS: Programming on the Internet subject. It focused on creating a website that focuses on processing data stored in 
+a mysql server utilising php and javascript to produce information that users can read. 
+
+![example capture](images/readme/web_assignment_1_cover.png)
+
 
 ## Dependencies
 
-* [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html)
-* Terminal for command line access. I use [iterm2 for macos](https://iterm2.com/)
-* [Travis CI](https://travis-ci.com/)
+* [PHP 7.3](https://www.php.net/)
+* [MySQL](https://www.mysql.com/downloads/)
 
-While a short list of the dependencies is often sufficient, sometimes it helps to elaborate in detail the rationale behind selecting certain dependencies. Java 8 is used here because it's the department's officially supported language and version.
-
-It also helps to describe the connections between dependencies. This repository is linked to Travis-CI by way of a `.travis.yml` file in the root of the directory.
-
+<!-- 
 ## Setup
 
 These are the steps to compile `Main.java` and run the program `Main`. Source code is found in the src folder. These steps are for use with command line workflow such as with a terminal.
@@ -38,8 +37,4 @@ $ java Main
 Hello World
 ```
 
-## Folder Structure
-
-* Code is saved into the `src` folder.
-* Data is saved into the `data` folder.
-
+-->

@@ -78,6 +78,7 @@ function checkIfInCart(id) {
 function clearCart() {
     var list = document.getElementById("cart-list");
     list.innerHTML = "";
+    list.appendChild(createHeadHTMLCartCell());
     virtualCart.cartArray = [];
     virtualCart.purchaseTotal = 0;
 }
@@ -136,6 +137,27 @@ function createHTMLCartCell(cartItem) {
     unitLabel.innerHTML = "(" + selectedProduct.quantity + ")"
     quantityLabel.innerHTML = cartItem.quantity;
     costLabel.innerHTML = "$" + cartItem.cost.toFixed(2);
+
+    listChild.appendChild(nameLabel);
+    listChild.appendChild(unitLabel);
+    listChild.appendChild(quantityLabel);
+    listChild.appendChild(costLabel);
+    return listChild;
+}
+
+function createHeadHTMLCartCell() {
+    var listChild = document.createElement("LI");
+    var nameLabel = document.createElement("P");
+    var unitLabel = document.createElement("P");
+    var quantityLabel = document.createElement("P");
+    var costLabel = document.createElement("P");
+    listChild.classList.add("cart-list-item");
+    listChild.classList.add("cart-list-header-item");
+
+    nameLabel.innerHTML = "Name";
+    unitLabel.innerHTML = "Unit";
+    quantityLabel.innerHTML = "Quantity";
+    costLabel.innerHTML = "Cost";
 
     listChild.appendChild(nameLabel);
     listChild.appendChild(unitLabel);
